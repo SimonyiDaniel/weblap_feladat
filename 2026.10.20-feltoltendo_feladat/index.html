@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kacsacsőrű emlős (Platypus)</title>
+</head>
+<body>
+<div id="tartalom"></div>
+<script>
+const div = document.getElementById("tartalom");
+div.style.maxWidth = "800px";
+div.style.margin = "0 auto";
+div.style.padding = "16px";
+document.documentElement.style.colorScheme = "light dark";
+
+const h1 = document.createElement("h1");
+h1.innerHTML = "<b>Kacsacsőrű emlős (Platypus)</b>";
+h1.style.textAlign = "center";
+div.appendChild(h1);
+
+
+// 1. sor: szöveg és kép
+const sor1 = document.createElement("div");
+sor1.style.display = "flex";
+sor1.style.flexWrap = "wrap";
+sor1.style.gap = "24px";
+div.appendChild(sor1);
+
+const szoveg1 = document.createElement("div");
+szoveg1.style.flex = "1 1 260px";
+sor1.appendChild(szoveg1);
+
+const h2 = document.createElement("h2");
+h2.innerHTML = "<b>Különös állat Ausztráliából</b>";
+szoveg1.appendChild(h2);
+
+let szovegek1 = [
+    "A kacsacsőrű emlős Kelet-Ausztrália és Tasmania folyóiban és tavaiban él. Emlős, mégis tojást rak.",
+    "Csőre nem kemény, hanem bőrszerű, és érzékeli a zsákmány izmai által keltett gyenge elektromos jeleket.",
+    "Amikor az első kitömött példány a 18. század végén Európába került, sok kutató átverésre gyanakodott, mert az állat mintha több fajból lett volna összevarrva."
+];
+
+for (const szoveg of szovegek1) {
+    const p = document.createElement("p");
+    p.innerHTML = "<font size='4'>" + szoveg + "</font>";
+    szoveg1.appendChild(p);
+}
+
+const kep1 = document.createElement("div");
+kep1.style.flex = "1 1 260px";
+kep1.style.maxWidth = "320px";
+sor1.appendChild(kep1);
+
+const img1 = document.createElement("img");
+img1.src = "kepek/casual_platypus.jpg";
+img1.style.width = "100%";
+kep1.appendChild(img1);
+
+const felirat1 = document.createElement("p");
+felirat1.innerHTML = "<b>casual platypus</b>";
+felirat1.style.textAlign = "center";
+kep1.appendChild(felirat1);
+
+
+// 2. sor: hosszú szöveg
+let szovegek2 = [
+    "Lábujjai között úszóhártya van, farka lapos, szőrmés bundája pedig vízhatlan. Éjszaka vadászik, főleg rákokat, rovarlárvákat és férgeket szed fel a medervízből, miközben lehunyt szemmel úszik.",
+    "A hímek hátsó lábán méregtüske van. A méreg nem halálos az embernek, de nagyon fájdalmas.",
+    "A nőstény a folyópart mentén ás hosszú üreget, és ott rakja le a tojásait. A kicsik nagyjából tíz nap után kelnek ki, és hónapokig tejjel táplálkoznak. Mellbimbó nincs, a tej az anyjuk hasának bőrén át szivárog."
+];
+
+for (const szoveg of szovegek2) {
+    const p = document.createElement("p");
+    p.innerHTML = "<font size='4'>" + szoveg + "</font>";
+    div.appendChild(p);
+}
+
+
+// 3. sor: kép és szöveg
+const sor2 = document.createElement("div");
+sor2.style.display = "flex";
+sor2.style.flexWrap = "wrap";
+sor2.style.gap = "24px";
+sor2.style.marginTop = "24px";
+div.appendChild(sor2);
+
+const kep2 = document.createElement("div");
+kep2.style.flex = "1 1 260px";
+kep2.style.maxWidth = "320px";
+sor2.appendChild(kep2);
+
+const img2 = document.createElement("img");
+img2.src = "kepek/perry the platypus.webp";
+img2.style.width = "100%";
+kep2.appendChild(img2);
+
+const felirat2 = document.createElement("p");
+felirat2.innerHTML = "<b>perry the platypus</b>";
+felirat2.style.textAlign = "center";
+kep2.appendChild(felirat2);
+
+const szoveg2 = document.createElement("div");
+szoveg2.style.flex = "1 1 260px";
+sor2.appendChild(szoveg2);
+
+let szovegek3 = [
+    "Gyomra nincs: a nyelőcső közvetlenül a belekbe vezet, és fogai sem maradnak meg felnőttkorra.",
+    "A rajzfilmekből is ismert, hogy ügynök, de a valóságban nyugodt, magányos folyólakó.",
+    "Élőhelyét a szárazság és a vízszennyezés fenyegeti, ezért egyes területeken egyre ritkábban lehet látni."
+];
+
+for (const szoveg of szovegek3) {
+    const p = document.createElement("p");
+    p.innerHTML = "<font size='4'>" + szoveg + "</font>";
+    szoveg2.appendChild(p);
+}
+
+
+// lábléc
+const footer = document.createElement("p");
+footer.innerHTML = "made with coffe // made by Barta B.";
+footer.style.textAlign = "center";
+footer.style.marginTop = "32px";
+div.appendChild(footer);
+</script>
+</body>
+</html>
